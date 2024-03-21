@@ -168,8 +168,9 @@ def interpolate(x, xp, fp, axis=1, descending=False):
     fp = np.asarray(fp)
 
     # Move interpolation axis to first position for easier indexing
-    xp = np.moveaxis(xp, axis, 0)
-    fp = np.moveaxis(fp, axis, 0)
+    # commenting out the lines below since this input is already in correct order
+    # xp = np.moveaxis(xp, axis, 0)
+    # fp = np.moveaxis(fp, axis, 0)
 
     # Handle descending axis
     if descending:
